@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ComposeProject</string>
+
+    <string name="api_base_url">https://dummyjson.com/</string>
+
+    <string name="employee_image">https://media.istockphoto.com/id/1303206558/photo/headshot-portrait-of-smiling-businessman-talk-on-video-call.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=hMJhVHKeTIznZgOKhtlPQEdZqb0lJ5Nekz1A9f8sPV8=</string>
+</resources>
