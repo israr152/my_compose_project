@@ -81,23 +81,23 @@ private fun DetailsContent(product: ProductDetailsModel) {
             text = product.title,
             modifier = Modifier
                 .padding(6.dp)
-                .constrainAs(title) { top.linkTo(image.bottom, margin = 20.dp) },
+                .constrainAs(title) { top.linkTo(image.bottom, margin = 10.dp) },
             color = MaterialTheme.colors.onBackground
         )
 
         Text(
-            text = product.category,
+            text = "Category: ${product.category}",
             modifier = Modifier
                 .padding(6.dp)
-                .constrainAs(category) { top.linkTo(title.bottom, margin = 10.dp) },
+                .constrainAs(category) { top.linkTo(title.bottom, margin = 4.dp) },
             color = MaterialTheme.colors.onBackground
         )
 
         Text(
-            text = product.brand,
+            text = "Brand: ${product.brand}",
             modifier = Modifier
                 .padding(6.dp)
-                .constrainAs(brand) { top.linkTo(category.bottom, margin = 10.dp) },
+                .constrainAs(brand) { top.linkTo(category.bottom, margin = 4.dp) },
             color = MaterialTheme.colors.onBackground
         )
 
@@ -105,14 +105,14 @@ private fun DetailsContent(product: ProductDetailsModel) {
             color = MaterialTheme.colors.onBackground,
             modifier = Modifier
                 .padding(6.dp)
-                .constrainAs(div) { top.linkTo(brand.bottom, margin = 10.dp) },
+                .constrainAs(div) { top.linkTo(brand.bottom, margin = 4.dp) },
         )
 
         Text(
-            text = product.description,
+            text = "Description: ${product.description}",
             modifier = Modifier
                 .padding(6.dp)
-                .constrainAs(desc) { top.linkTo(div.bottom, margin = 10.dp) },
+                .constrainAs(desc) { top.linkTo(div.bottom, margin = 4.dp) },
             color = MaterialTheme.colors.onBackground
         )
     }
