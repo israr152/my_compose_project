@@ -18,6 +18,8 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavController
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
+import com.google.gson.Gson
+import com.sofit.israr.composeproject.models.Product
 import com.sofit.israr.composeproject.models.ProductDetailsModel
 import com.sofit.israr.composeproject.ui.ErrorContent
 import com.sofit.israr.composeproject.ui.ProgressContent
@@ -25,8 +27,10 @@ import com.sofit.israr.composeproject.viewModels.FlowState
 import com.sofit.israr.composeproject.viewModels.IndexViewModel
 
 @Composable
-fun ProductDetailsScreen(navController: NavController, vm: IndexViewModel, productId: Int) {
-    vm.loadProductDetails(productId)
+fun ProductDetailsScreen(navController: NavController, vm: IndexViewModel) {
+    val productString = navController.previousBackStackEntry?.savedStateHandle?.get<String>("product")
+    val p = Gson().fromJson(productString, Product::class.java)
+    vm.loadProductDetails(p?.id?:1)
 
     Scaffold(
         modifier = Modifier.fillMaxSize(),
